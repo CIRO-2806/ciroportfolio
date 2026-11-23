@@ -1,0 +1,43 @@
+#background{
+    background-color: #120a00;
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -999;
+    position: fixed;
+}
+
+#background-item-1, #background-item-2{
+    background-color: #ffbb00;
+    width: 0px;
+    height: 0px;
+    border-radius: 100%;
+    
+    
+
+    position:absolute;
+    animation: destello 7s ease-in-out infinite;
+}
+#background-item-2{
+    top: 80%;
+    right: 10%;
+    box-shadow: 0px 0px 200px 150px #ffbb00;
+}
+#background-item-1{
+    box-shadow: 0px 0px 200px 150px #ffbb00;
+    top: 33%;
+    left: 10%;
+}
+
+@keyframes destello{
+0%,100%{
+    opacity: 0.4;
+}
+50%{
+    opacity: 0.7;
+}
+
+}
