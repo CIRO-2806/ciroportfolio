@@ -1,4 +1,4 @@
-import {PORTFOLIO_CONTEXT} from "./context.ts";
+import {PORTFOLIO_CONTEXT} from "./context.js";
 
 type ChatMessage = {role:"user" | "assistant"; content: string};
 type GroqResponse = {
