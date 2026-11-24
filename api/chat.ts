@@ -2,8 +2,11 @@ import {PORTFOLIO_CONTEXT} from "./context.js";
 
 type ChatMessage = {role:"user" | "assistant"; content: string};
 type GroqResponse = {
-    choices?: {message?:{content?:string}}[];
-}
+  choices?: {
+    finish_reason?: string;
+    message?: { content?: string | null; reasoning?: string };
+  }[];
+};
 
 export async function POST(request: Request) {
   try {
@@ -50,8 +53,12 @@ export async function POST(request: Request) {
     }
 
     const data = (await response.json()) as GroqResponse;
-    const reply = data.choices?.[0]?.message?.content ?? "";
-    return Response.json({ reply });
+    const message = data.choices?.[0]?.message;
+    const reply = message?.content || message?.reasoning || "";
+    return Response.json({
+      reply,
+      finish_reason: data.choices?.[0]?.finish_reason ?? null,
+    });
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e);
     return Response.json({ error: msg }, { status: 500 });
