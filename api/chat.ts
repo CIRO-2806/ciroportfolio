@@ -32,6 +32,7 @@ export async function POST(request : Request){
         body:JSON.stringify({
             model: "openai/gpt-oss-120b",
             temperature:0.4,
+            max_completion_tokens:300,
             messages:[
                 {
                     role:"system",
