@@ -278,6 +278,10 @@
     .a img,.b img{
         box-shadow: 0 20px 15px -12px #0066ff;
     }
+
+    .b{
+        font-size: 0.9em;
+    }
     p{
         font-size: 0.7em;
     }
