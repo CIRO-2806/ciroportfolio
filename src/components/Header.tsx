@@ -1,7 +1,7 @@
 import './Header.css';
 function Header(){
     return <header id="header" >
-        <h1>Ciro Cabral</h1>
+        <h1>Ciro Portfolio</h1>
         <ul>
             <li><a href=''>Servicios</a></li>
             <li><a href=''>Conocimientos</a></li>

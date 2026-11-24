@@ -44,3 +44,19 @@ li:hover{
     right: 4%;
     color: #acacac;
 }
+
+@media(max-width:1024px){
+    h1{
+        font-size: 1.2em;
+        left: 2%;
+    }
+    ul{
+        margin-left: 25px;
+    }
+    li{
+        padding: 8px;
+        margin: 5px;
+        border-radius: 15px;
+        
+    }
+}

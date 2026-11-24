@@ -26,9 +26,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    box-shadow: 0 20px 20px -12px #553f00;
     
 }
-h2{
+#main-h2{
     color: #ffbb00;
     font-size: 2em;
     position: absolute;
@@ -38,7 +39,7 @@ h2{
     
 
 }
-p{
+#main-p{
     width: 75%;
     position: absolute;
     top: 30%;
@@ -46,15 +47,10 @@ p{
     color: #bbbbbb;
     font-weight: 0;
 }
-#projects{
-    width: 100%;
-    height: 100dvh;
-    background-color: #090600;
-    border: 2px solid #332500;
-}
+
 
 #button-toggle-chat{
-    width: 175px;
+    width: 150px;
     height: 70px;
     background: linear-gradient(to left, #000000,#4a2b00);
     border: 2px solid #ff9500;
@@ -66,10 +62,210 @@ p{
     transition: 0.2s ease-in-out;
     cursor: pointer;
     font-weight: 800;
+    margin-top: 10px;
     
 }
 
 #button-toggle-chat:hover{
     transform: translateY(-5px);
     box-shadow: 0px 0px 15px #ff9500;
+}
+
+
+#projects{
+    width: 100%;
+    height: 100%;
+    background-color: #090600;
+    border: 2px solid #332500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 125px;
+    padding-bottom: 25px;
+}
+
+.project{
+    background-color: #090600;
+    border-bottom: 2px solid #ff9500;
+    border-top: 2px solid #ff9500;
+    width: 50%;
+    height: 30dvh;
+    margin: 10px 0px;
+    padding:25px;
+    display: flex;
+    gap: 5%;
+    box-shadow: 0 20px 20px -12px #553f00;
+    
+    
+
+}
+
+.a{
+    position: relative;
+    left: 15%;
+}
+
+.a img{
+    box-shadow: 20px 0 15px -12px #0066ff;
+}
+
+.b{
+    position: relative;
+    right: 15%;
+}
+
+.b img{
+    box-shadow: -20px 0 15px -12px #0066ff;
+}
+
+#project-image{
+    width: auto;
+    height: 100%;
+    
+}
+
+#project-text-section{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 100%;
+    flex-direction: column;
+}
+
+#projects-h2{
+    font-size: 2em;
+    padding-bottom: 25px;
+}
+
+#project-text-section h2{
+    font-size: 2em;
+    font-weight: 900;
+    color: #0066ff;
+    border-bottom: 2px solid #0066ff;
+    margin-bottom: 10px;
+    background-color: #090600;
+    box-shadow: 0 10px 15px -8px #0066ff;
+    overflow: hidden;
+
+}
+
+#project-text-section p{
+    color: #bbbbbb;
+    overflow: hidden;
+}
+
+#services-h2{
+    margin: 20px 0px;
+    font-size: 2em;
+}
+#services{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+    
+    
+}
+
+#service-box{
+    background-color: #090600;
+    width: 400px;
+    height: 300px;
+    border-radius: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 25px;
+    margin: 25px 0px;
+    border: 2px solid #332500;
+    box-shadow: 0 20px 15px -12px #553f00;
+}
+
+#service-box h2{
+    color: #ffbb00;
+    width: 60%;
+}
+
+#service-box img{
+    width: 40px;
+    margin: 0px 20px;
+    padding-bottom: 3px;
+    box-shadow: 0 15px 10px -12px #553f00;
+    
+}
+#service-box p{
+    width: 75%;
+}
+
+@media(max-width:1500px){
+    #main-card{
+        width: 50%;
+        height: 300px;
+    }
+
+    #button-toggle-chat{
+        font-size: 1.2em;
+        width: 160px;
+        height: 60px;
+    }
+    #projects{
+        padding-top: 250px;
+    }
+
+    #project-text-section p{
+        font-size: 0.8em;
+    }
+    #project-text-section h2{
+        font-size: 1.5em;
+    }
+}
+@media(max-width:1024px){
+    #main-p{
+        font-size: 1em;
+        top: 30%;
+    }
+
+    #main-h2{
+        top: 7.5%;
+        font-size: 1.5em;
+        width: 60%;
+    }
+
+    #main-card{
+        height: 340px;
+        border-radius: 30px;
+        
+    }
+    #button-toggle-chat{
+        font-size: 1.2em;
+        width: 160px;
+        height: 60px;
+        top: 73%;
+    }
+
+    .project{
+        height: 40dvh;
+        width: 70%;
+    }
+    .a{
+        left: 0%;
+    }
+    .b{
+        right: 0%;
+    }
+
+    #project-image{
+        height: 50%;
+        align-self: center;
+    }
+
+    
 }
