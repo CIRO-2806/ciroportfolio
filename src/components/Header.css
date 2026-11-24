@@ -60,3 +60,21 @@ li:hover{
         
     }
 }
+
+@media(max-width:768px){
+    #header{
+        flex-direction: column;
+        height: 80px;
+    }
+    h1{
+        display: none;
+    }
+    ul{
+        margin-left: 0px;
+    }
+    li{
+        padding: 5px;
+        margin: 3px;
+        
+    }
+}
