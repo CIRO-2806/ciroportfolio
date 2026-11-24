@@ -4,7 +4,7 @@ type ChatMessage = {role:"user" | "assistant"; content: string};
 type GroqResponse = {
   choices?: {
     finish_reason?: string;
-    message?: { content?: string | null; reasoning?: string };
+    message?: { content?: string | null };
   }[];
 };
 
@@ -54,9 +54,9 @@ export async function POST(request: Request) {
 
     const data = (await response.json()) as GroqResponse;
     const message = data.choices?.[0]?.message;
-    const reply = message?.content || message?.reasoning || "";
+    const reply = message?.content?.trim() || "";
     return Response.json({
-      reply,
+      reply: reply || "No pude generar una respuesta. Intentá de nuevo.",
       finish_reason: data.choices?.[0]?.finish_reason ?? null,
     });
   } catch (e) {
